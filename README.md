@@ -79,7 +79,8 @@ grunt.initConfig({
         // Select files which are newer than `dest`.
         handlerByFile: 'newFile',
         // Clean the selected files.
-        handlerByContent: require('htmlclean')
+        handlerByContent: require('grunt-htmlclean/node_modules/htmlclean')
+        //handlerByContent: require('htmlclean') // If htmlclean is already installed. (Not grunt-htmlclean)
       },
       expand: true,
       cwd: 'develop/',
