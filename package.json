@@ -1,0 +1,42 @@
+{
+  "name": "grunt-htmlclean",
+  "description": "Simple and lightweight cleaner for HTML that just removes unneeded whitespaces, line-breaks, comments, etc.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/anseki/grunt-htmlclean",
+  "author": {
+    "name": "anseki"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/anseki/grunt-htmlclean.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anseki/grunt-htmlclean/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/anseki/grunt-htmlclean/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {
+    "htmlclean": "~0.1.0"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "keywords": [
+    "gruntplugin",
+    "html",
+    "clean",
+    "whitespace",
+    "line break",
+    "comment",
+    "minify",
+    "remove space",
+    "lightweight"
+  ]
+}
