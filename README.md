@@ -10,9 +10,25 @@ Those configuring are a little pain in the neck for me. And the results was not 
 htmlclean removes the following texts.
 
 + The leading whitespaces, tabs and line-breaks, and the trailing whitespaces, tabs and line-breaks.
-+ The tabs and line-breaks (not whitespaces) between HTML tags.
++ The unneeded whitespaces, tabs and line-breaks between HTML tags.
 + The more than two whitespaces, tabs and line-breaks (suppressed to one space).
 + HTML comments.
+
+The more than two whitespaces in a line that includes HTML tags are suppressed.
+
+**Example:**
+
+Before
+
+```html
+<p>The <strong> clean <span> <em> HTML is here. </em> </span> </strong> </p>
+```
+
+After
+
+```html
+<p>The <strong>clean <span><em>HTML is here.</em></span></strong></p>
+```
 
 ## Protecting
 The following texts are protected (excluded from removing).
@@ -23,6 +39,9 @@ The following texts are protected (excluded from removing).
 + IE conditional comments. e.g. `<!--[if lt IE 7]>`
 + The texts between `<!--[htmlclean-protect]-->` and `<!--[/htmlclean-protect]-->`.
 + The texts that is matched by `protect` option (see "Options").
+
+## More Informations
+See [htmlclean](https://github.com/anseki/htmlclean).
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
@@ -61,7 +80,7 @@ grunt.initConfig({
 })
 ```
 
-See [htmlclean](https://github.com/anseki/htmlclean) for options and more informations.
+See [htmlclean](https://github.com/anseki/htmlclean) for options and more information.
 
 ## Working with grunt-task-helper
 For example, you want to clean only changed HTML files. Then [grunt-task-helper](https://github.com/anseki/grunt-task-helper) helps it. In this case, using `handlerByContent` Function instead of this plugin is better. Because grunt parses `files` components in every tasks(targets). `handlerByContent` can be included to one task with other handlers (e.g. select changed HTML files).  
@@ -92,4 +111,5 @@ grunt.initConfig({
 ```
 
 ## Release History
+ * 2013-08-27			v0.1.2			Update package.json for htmlclean v2.0.0. (This script is not changed.)
  * 2013-08-27			v0.1.0			Initial release.
