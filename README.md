@@ -75,9 +75,9 @@ grunt.initConfig({
       cwd: 'develop/',
       src: '**/*.html',
       dest: 'public_html/'
-    },
-  },
-})
+    }
+  }
+});
 ```
 
 See [htmlclean](https://github.com/anseki/htmlclean) for options and more information.
