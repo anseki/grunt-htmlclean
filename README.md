@@ -111,5 +111,6 @@ grunt.initConfig({
 ```
 
 ## Release History
+ * 2014-06-11			v0.1.4			Update package.json for htmlclean v2.0.1. (This script is not changed.)
  * 2013-11-06			v0.1.3			Update package.json for htmlclean v2.0.0. (This script is not changed.)
  * 2013-08-27			v0.1.0			Initial release.
