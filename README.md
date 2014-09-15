@@ -14,7 +14,7 @@ htmlclean removes the following texts.
 + The more than two whitespaces, tabs and line-breaks (suppressed to one space).
 + HTML comments.
 
-The more than two whitespaces in a line that includes HTML tags are suppressed.
+The more than two whitespaces (even if those are divided by HTML tags) in a line are suppressed.
 
 **Example:**
 
@@ -30,12 +30,15 @@ After
 <p>The <strong>clean <span><em>HTML is here.</em></span></strong></p>
 ```
 
+The whitespace that was right side of `<strong>` was removed, and the left side was kept.  
+The both side whitespaces of `<em>` were removed.
+
 ## Protecting
 The following texts are protected (excluded from removing).
 
 + The texts in `textarea`, `script` and `style` elements, and text nodes in `pre` elements.
 + The quoted texts in tag attribute.
-+ Apache SSI tags.
++ The texts in SSI tags (PHP, JSP, ASP/ASP.NET and Apache SSI).
 + IE conditional comments. e.g. `<!--[if lt IE 7]>`
 + The texts between `<!--[htmlclean-protect]-->` and `<!--[/htmlclean-protect]-->`.
 + The texts that is matched by `protect` option (see "Options").
@@ -110,7 +113,8 @@ grunt.initConfig({
 });
 ```
 
-## Release History
+## History
+ * 2014-09-16			v2.2.0			Update package.json for htmlclean v2.2.0. (This script is not changed. fix version number.)
  * 2014-06-15			v0.1.7			Update package.json for htmlclean v2.1.1. (This script is not changed.)
  * 2014-06-15			v0.1.6			Update package.json for htmlclean v2.1.0. (This script is not changed.)
  * 2014-06-14			v0.1.5			Update package.json for htmlclean v2.0.2. (This script is not changed.)
