@@ -1,6 +1,6 @@
 # grunt-htmlclean
 
-Simple and lightweight cleaner for HTML that just removes unneeded whitespaces, line-breaks, comments, etc.  
+Simple and lightweight cleaner that just removes whitespaces, comments, etc. to minify HTML.  
 This [Grunt](http://gruntjs.com/) plugin is wrapper of [htmlclean](https://github.com/anseki/htmlclean).
 
 [HtmlCompressor](http://code.google.com/p/htmlcompressor/), [HTMLMinifier](https://github.com/kangax/html-minifier) and others are better choice if you want to control details of editing.  
