@@ -1,7 +1,7 @@
 {
   "name": "grunt-htmlclean",
-  "description": "Simple and lightweight cleaner that just removes whitespaces, comments, etc. to minify HTML.",
-  "version": "2.2.0d",
+  "description": "Simple and lightweight cleaner that just removes whitespaces, comments, etc. to minify HTML. This differs from others in that this removes whitespaces, line-breaks, etc. as much as possible.",
+  "version": "2.2.1",
   "homepage": "https://github.com/anseki/grunt-htmlclean",
   "author": {
     "name": "anseki"
@@ -23,7 +23,7 @@
     "node": ">= 0.8.0"
   },
   "dependencies": {
-    "htmlclean": "~2.2.0"
+    "htmlclean": "~2.2.1"
   },
   "peerDependencies": {
     "grunt": "~0.4.1"

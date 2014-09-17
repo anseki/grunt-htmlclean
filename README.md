@@ -1,6 +1,7 @@
 # grunt-htmlclean
 
 Simple and lightweight cleaner that just removes whitespaces, comments, etc. to minify HTML.  
+This differs from others in that this removes whitespaces, line-breaks, etc. as much as possible.  
 This [Grunt](http://gruntjs.com/) plugin is wrapper of [htmlclean](https://github.com/anseki/htmlclean).
 
 [HtmlCompressor](http://code.google.com/p/htmlcompressor/), [HTMLMinifier](https://github.com/kangax/html-minifier) and others are better choice if you want to control details of editing.  
@@ -114,6 +115,7 @@ grunt.initConfig({
 ```
 
 ## History
+ * 2014-09-18			v2.2.1			Update package.json for htmlclean v2.1.1.
  * 2014-09-16			v2.2.0			Update package.json for htmlclean v2.2.0. (This script is not changed. fix version number.)
  * 2014-06-15			v0.1.7			Update package.json for htmlclean v2.1.1. (This script is not changed.)
  * 2014-06-15			v0.1.6			Update package.json for htmlclean v2.1.0. (This script is not changed.)
