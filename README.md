@@ -115,7 +115,8 @@ grunt.initConfig({
 ```
 
 ## History
- * 2014-09-18			v2.2.1			Update package.json for htmlclean v2.1.1.
+ * 2014-09-18			v2.2.2			Update package.json for htmlclean v2.2.2.
+ * 2014-09-18			v2.2.1			Update package.json for htmlclean v2.2.1.
  * 2014-09-16			v2.2.0			Update package.json for htmlclean v2.2.0. (This script is not changed. fix version number.)
  * 2014-06-15			v0.1.7			Update package.json for htmlclean v2.1.1. (This script is not changed.)
  * 2014-06-15			v0.1.6			Update package.json for htmlclean v2.1.0. (This script is not changed.)
