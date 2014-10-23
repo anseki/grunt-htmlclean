@@ -1,33 +1,8 @@
 {
   "name": "grunt-htmlclean",
+  "version": "2.2.3",
+  "title": "grunt-htmlclean",
   "description": "Simple and lightweight cleaner that just removes whitespaces, comments, etc. to minify HTML. This differs from others in that this removes whitespaces, line-breaks, etc. as much as possible.",
-  "version": "2.2.2",
-  "homepage": "https://github.com/anseki/grunt-htmlclean",
-  "author": {
-    "name": "anseki"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/anseki/grunt-htmlclean.git"
-  },
-  "bugs": {
-    "url": "https://github.com/anseki/grunt-htmlclean/issues"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/anseki/grunt-htmlclean/blob/master/LICENSE-MIT"
-    }
-  ],
-  "engines": {
-    "node": ">= 0.8.0"
-  },
-  "dependencies": {
-    "htmlclean": "~2.2.2"
-  },
-  "peerDependencies": {
-    "grunt": "~0.4.1"
-  },
   "keywords": [
     "gruntplugin",
     "html",
@@ -38,5 +13,25 @@
     "minify",
     "remove space",
     "lightweight"
-  ]
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {
+    "htmlclean": "~2.2.2"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "homepage": "https://github.com/anseki/grunt-htmlclean",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/anseki/grunt-htmlclean.git"
+  },
+  "bugs": "https://github.com/anseki/grunt-htmlclean/issues",
+  "licenses": "MIT",
+  "author": {
+    "name": "anseki",
+    "url": "https://github.com/anseki"
+  }
 }
