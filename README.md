@@ -2,6 +2,8 @@
 
 This [Grunt](http://gruntjs.com/) plugin is wrapper of [htmlclean](https://github.com/anseki/htmlclean).
 
+* [gulp](http://gulpjs.com/) plugin: [gulp-htmlclean](https://github.com/anseki/gulp-htmlclean)
+
 Simple and lightweight cleaner that just removes whitespaces, comments, etc. to minify HTML.  
 This differs from others in that this removes whitespaces, line-breaks, etc. as much as possible.
 
