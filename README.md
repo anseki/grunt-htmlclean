@@ -4,7 +4,7 @@ This [Grunt](http://gruntjs.com/) plugin is wrapper of [htmlclean](https://githu
 
 * [gulp](http://gulpjs.com/) plugin: [gulp-htmlclean](https://github.com/anseki/gulp-htmlclean)
 
-Simple and lightweight cleaner that just removes whitespaces, comments, etc. to minify HTML.  
+Simple and lightweight cleaner that just removes whitespaces, comments, etc. to minify HTML/SVG.  
 This differs from others in that this removes whitespaces, line-breaks, etc. as much as possible.
 
 [HtmlCompressor](http://code.google.com/p/htmlcompressor/), [HTMLMinifier](https://github.com/kangax/html-minifier) and others are better choice if you want to control details of editing.  
@@ -14,11 +14,11 @@ Those configuring are a little pain in the neck for me. And the results was not 
 htmlclean removes the following texts.
 
 + The leading whitespaces, tabs and line-breaks, and the trailing whitespaces, tabs and line-breaks.
-+ The unneeded whitespaces, tabs and line-breaks between HTML tags.
++ The unneeded whitespaces, tabs and line-breaks between HTML/SVG tags.
 + The more than two whitespaces, tabs and line-breaks (suppressed to one space).
-+ HTML comments.
++ HTML/SVG comments.
 
-The more than two whitespaces (even if those are divided by HTML tags) in a line are suppressed.
+The more than two whitespaces (even if those are divided by HTML/SVG tags) in a line are suppressed.
 
 **Example:**
 
