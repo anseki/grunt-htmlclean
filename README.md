@@ -4,11 +4,10 @@ This [Grunt](http://gruntjs.com/) plugin is wrapper of [htmlclean](https://githu
 
 * [gulp](http://gulpjs.com/) plugin: [gulp-htmlclean](https://github.com/anseki/gulp-htmlclean)
 
+**If you want to just clean files, [Command Line Tool](https://github.com/anseki/htmlclean) is easy way.**
+
 Simple and lightweight cleaner that just removes whitespaces, comments, etc. to minify HTML/SVG.  
 This differs from others in that this removes whitespaces, line-breaks, etc. as much as possible.
-
-[HtmlCompressor](http://code.google.com/p/htmlcompressor/), [HTMLMinifier](https://github.com/kangax/html-minifier) and others are better choice if you want to control details of editing.  
-Those configuring are a little pain in the neck for me. And the results was not what I need. So, I wrote htmlclean. This removes unneeded whitespaces, line-breaks, comments, etc. That's all.
 
 ## Removing
 htmlclean removes the following texts.
@@ -118,6 +117,7 @@ grunt.initConfig({
 ```
 
 ## History
+ * 2015-02-21			v2.4.0			Update package.json for htmlclean v2.4.0.
  * 2015-02-13			v2.3.0			Update package.json for htmlclean v2.3.0.
  * 2014-09-16			v2.2.0			Update package.json for htmlclean v2.2.0.
  * 2013-08-27			v0.1.0			Initial release.
