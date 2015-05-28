@@ -115,10 +115,3 @@ grunt.initConfig({
   }
 });
 ```
-
-## History
- * 2015-02-22			v2.5.0			Update package.json for htmlclean v2.5.0.
- * 2015-02-21			v2.4.0			Update package.json for htmlclean v2.4.0.
- * 2015-02-13			v2.3.0			Update package.json for htmlclean v2.3.0.
- * 2014-09-16			v2.2.0			Update package.json for htmlclean v2.2.0.
- * 2013-08-27			v0.1.0			Initial release.
