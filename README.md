@@ -46,7 +46,7 @@ The following texts are protected (excluded from removing).
 + The texts between `<!--[htmlclean-protect]-->` and `<!--[/htmlclean-protect]-->`.
 + The texts that is matched by `protect` option (see "Options").
 
-## More Informations
+## More Information
 See [htmlclean](https://github.com/anseki/htmlclean).
 
 ## Getting Started
