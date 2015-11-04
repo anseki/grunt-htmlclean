@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 
   var htmlclean = require('htmlclean');
 
-  grunt.registerMultiTask('htmlclean', 'Simple and lightweight cleaner that just removes whitespaces, comments, etc. to minify HTML.', function() {
+  grunt.registerMultiTask('htmlclean', 'Simple and safety cleaner without changing the structure to minify HTML/SVG.', function() {
     var options = this.options();
 
     this.files.forEach(function(f) {

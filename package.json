@@ -1,8 +1,8 @@
 {
   "name": "grunt-htmlclean",
-  "version": "2.6.4",
+  "version": "2.7.1",
   "title": "grunt-htmlclean",
-  "description": "Simple and lightweight cleaner that just removes whitespaces, comments, etc. to minify HTML/SVG. This differs from others in that this removes whitespaces, line-breaks, etc. as much as possible.",
+  "description": "Simple and safety cleaner without changing the structure to minify HTML/SVG.",
   "keywords": [
     "gruntplugin",
     "html",
@@ -19,7 +19,7 @@
     "node": ">= 0.8.0"
   },
   "dependencies": {
-    "htmlclean": "~2.6.3"
+    "htmlclean": "~2.7.1"
   },
   "peerDependencies": {
     "grunt": "~0.4.1"
