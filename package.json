@@ -1,6 +1,6 @@
 {
   "name": "grunt-htmlclean",
-  "version": "2.7.2",
+  "version": "2.7.3",
   "title": "grunt-htmlclean",
   "description": "Simple and safety cleaner without changing the structure to minify HTML/SVG.",
   "keywords": [
@@ -19,7 +19,7 @@
     "node": ">= 0.8.0"
   },
   "dependencies": {
-    "htmlclean": "~2.7.2"
+    "htmlclean": "~2.7.3"
   },
   "peerDependencies": {
     "grunt": "~0.4.1"
