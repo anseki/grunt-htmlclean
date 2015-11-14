@@ -6,49 +6,48 @@ This [Grunt](http://gruntjs.com/) plugin is wrapper of [htmlclean](https://githu
 
 **If you want to just clean files, [Command Line Tool](https://github.com/anseki/htmlclean) is easy way.**
 
-Simple and safety cleaner without changing the structure to minify HTML/SVG.
+Simple and safety HTML/SVG cleaner to minify without changing its structure.
 
-## Removing
+For example, more than two whitespaces (even if those are divided by tags) in a line are reduced.
 
-htmlclean removes the following texts.
-
-+ The leading whitespaces, tabs and line-breaks, and the trailing whitespaces, tabs and line-breaks.
-+ The unneeded whitespaces, tabs and line-breaks between HTML/SVG tags.
-+ The more than two whitespaces, tabs and line-breaks (suppressed to one space).
-+ HTML/SVG comments.
-+ The unneeded whitespaces, tabs and line-breaks, meaningless zeros, numbers, signs, etc. in the path data of SVG (e.g. `d` attribute of `path` element).
-
-For example, the more than two whitespaces (even if those are divided by HTML/SVG tags) in a line are suppressed:
-
-* Before
+Before:
 
 ```html
 <p>The <strong> clean <span> <em> HTML is here. </em> </span> </strong> </p>
 ```
 
-* After
+After:
 
 ```html
 <p>The <strong>clean <span><em>HTML is here.</em></span></strong></p>
 ```
 
-The whitespace that was right side of `<strong>` was removed, and the left side was kept.  
-The both side whitespaces of `<em>` were removed.
+The whitespace that was on the right side of the `<strong>` was removed, and one on the left side was kept. And whitespaces on the both side of the `<em>` were removed.
 
-For example, in a case of this SVG file, 4,784 bytes were reduced:
+For example, unneeded whitespaces in path data of SVG are reduced. In the case of this SVG file, 4,784 bytes were reduced:
 
 <img src="https://rawgit.com/anseki/grunt-htmlclean/master/Ghostscript_Tiger.svg" width="300" height="300">
 
+## Removing
+
+htmlclean removes following texts.
+
++ Leading and trailing whitespaces (tabs and line-breaks are included)
++ Unneeded whitespaces between HTML/SVG tags
++ More than two whitespaces (reduced to one space)
++ HTML/SVG comments
++ Unneeded whitespaces, meaningless zeros, numbers, signs, etc. in path data of SVG (e.g. some attribute's value of `path`, `animateMotion`, etc. elements)
+
 ## Protecting
 
-The following texts are protected (excluded from [Removing](#removing)).
+Following texts are protected (excluded from [Removing](#removing) list).
 
-+ The texts in `textarea`, `script` and `style` elements, and the text nodes in `pre` elements.
-+ The quoted texts in the tag attributes.
-+ The texts in the SSI tags (PHP, JSP, ASP/ASP.NET and Apache SSI).
-+ IE conditional comments. e.g. `<!--[if lt IE 7]>`
-+ The texts between `<!--[htmlclean-protect]-->` and `<!--[/htmlclean-protect]-->`.
-+ The texts that is matched by the [`protect`](#protect) option.
++ Texts in `textarea`, `script` and `style` elements, and text nodes in `pre` elements
++ Quoted texts in tag attributes except path data of SVG
++ Texts in SSI tags (PHP, JSP, ASP/ASP.NET and Apache SSI)
++ IE conditional comments (e.g. `<!--[if lt IE 7]>`)
++ Texts between `<!--[htmlclean-protect]-->` and `<!--[/htmlclean-protect]-->`
++ Texts that is matched by [`protect`](#protect) option
 
 ## More Information
 
