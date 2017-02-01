@@ -2,7 +2,7 @@
  * grunt-htmlclean
  * https://github.com/anseki/grunt-htmlclean
  *
- * Copyright (c) 2015 anseki
+ * Copyright (c) 2017 anseki
  * Licensed under the MIT license.
  */
 
