@@ -13,9 +13,9 @@ module.exports = function(grunt) {
   var htmlclean = require('htmlclean');
 
   grunt.registerMultiTask('htmlclean', 'Simple and safety HTML/SVG cleaner to minify without changing its structure.', function() {
-    var options = this.options();
+    var options = this.options(); // eslint-disable-line no-invalid-this
 
-    this.files.forEach(function(f) {
+    this.files.forEach(function(f) { // eslint-disable-line no-invalid-this
       // Concat specified files.
       var src = f.src.filter(function(filepath) {
         // Warn on and remove invalid source files (if nonull was set).
