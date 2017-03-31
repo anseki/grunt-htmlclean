@@ -19,7 +19,7 @@
     "node": ">= 0.8.0"
   },
   "dependencies": {
-    "htmlclean": "~2.7.8"
+    "htmlclean": "^3.0.1"
   },
   "peerDependencies": {
     "grunt": ">=0.4.0"
