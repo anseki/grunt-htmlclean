@@ -16,8 +16,7 @@
     "lightweight"
   ],
   "files": [
-    "tasks/*.js",
-    "LICENSE-MIT"
+    "tasks/*.js"
   ],
   "engines": {
     "node": ">= 0.8.0"
