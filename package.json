@@ -1,6 +1,6 @@
 {
   "name": "grunt-htmlclean",
-  "version": "2.7.17",
+  "version": "2.7.18",
   "title": "grunt-htmlclean",
   "description": "Simple and safety HTML/SVG cleaner to minify without changing its structure.",
   "keywords": [
