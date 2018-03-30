@@ -13,26 +13,29 @@ module.exports = function(grunt) {
   var htmlclean = require('htmlclean');
 
   grunt.registerMultiTask('htmlclean', 'Simple and safety HTML/SVG cleaner to minify without changing its structure.', function() {
-    var options = this.options(); // eslint-disable-line no-invalid-this
+    var options = this.options();
 
-    this.files.forEach(function(f) { // eslint-disable-line no-invalid-this
+    this.files.forEach(function(f) {
       // Concat specified files.
-      var src = f.src.filter(function(filepath) {
-        // Warn on and remove invalid source files (if nonull was set).
-        if (!grunt.file.exists(filepath)) {
-          grunt.log.warn('Source file "' + filepath + '" not found.');
-          return false;
-        } else {
+      var srcFiles = f.src.filter(function(filepath) {
+          // Warn on and remove invalid source files (if nonull was set).
+          if (!grunt.file.exists(filepath)) {
+            grunt.log.warn('Source file "' + filepath + '" not found.');
+            return false;
+          }
           return true;
-        }
-      }).map(function(filepath) {
-        return grunt.file.read(filepath);
-      }).join(grunt.util.linefeed);
+        }),
+        content = srcFiles.length
+          ? srcFiles.map(function(filepath) { return grunt.file.read(filepath); })
+            .join(grunt.util.linefeed) :
+          null;
 
-      src = htmlclean(src, options);
+      if (content == null) { return; }
+
+      content = htmlclean(content, options);
 
       // Write the destination file.
-      grunt.file.write(f.dest, src);
+      grunt.file.write(f.dest, content);
       grunt.log.writeln('File "' + f.dest + '" created.');
     });
   });
