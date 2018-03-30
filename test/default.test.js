@@ -44,7 +44,7 @@ sinon.stub(grunt.file, 'write');
 sinon.stub(grunt, 'warn');
 
 describe('implements a basic flow as file based plugin', () => {
-  const OPTS = {p1: 'v1', p2: 'v1'};
+  const OPTS = {p1: 'v1', p2: 'v2'};
 
   it('should skip process if no file is input', done => {
     resetAll();
