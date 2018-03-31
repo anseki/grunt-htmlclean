@@ -22,7 +22,7 @@ function resetAll() {
   grunt.file.write.resetHistory();
 }
 
-function runTask(options, done, files) {
+function runTask(done, options, files) {
   grunt.initConfig({
     htmlclean: {
       test: {
@@ -49,13 +49,13 @@ describe('implements a basic flow as file based plugin', () => {
   it('should skip process if no file is input', done => {
     resetAll();
     runTask(
-      OPTS,
       () => {
         expect(htmlclean.notCalled).to.be.true;
         expect(grunt.file.write.notCalled).to.be.true;
 
         done();
       },
+      OPTS,
       [{
         src: `${FIXTURES_DIR_PATH}/*.txt`,
         dest: OUTPUT_PATH
@@ -66,14 +66,14 @@ describe('implements a basic flow as file based plugin', () => {
   it('should accept contents from all source files', done => {
     resetAll();
     runTask(
-      OPTS,
       () => {
         expect(htmlclean.calledOnceWithExactly(ALL_CONTENTS, OPTS)).to.be.true;
         expect(grunt.file.write.calledOnceWithExactly(
           OUTPUT_PATH, `${ALL_CONTENTS}<htmlclean>`)).to.be.true;
 
         done();
-      }
+      },
+      OPTS
     );
   });
 
