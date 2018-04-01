@@ -15,7 +15,8 @@ const expect = require('chai').expect,
     .map(fileName => require('fs').readFileSync(
       path.join(FIXTURES_DIR_PATH, fileName), {encoding: 'utf8'}))
     .join(grunt.util.linefeed),
-  OUTPUT_PATH = 'path/to/output';
+  OUTPUT_PATH = 'path/to/output',
+  LIB_NAME = 'htmlclean';
 
 function resetAll() {
   htmlclean.resetHistory();
@@ -25,7 +26,7 @@ function resetAll() {
 function runTask(done, options, files) {
   let error;
   grunt.initConfig({
-    htmlclean: {
+    [LIB_NAME]: {
       test: {
         options,
         files: files || [{
@@ -41,12 +42,24 @@ function runTask(done, options, files) {
   grunt.task.start({asyncDone: true});
 }
 
-grunt.registerTask('default', ['htmlclean:test']);
+grunt.registerTask('default', [`${LIB_NAME}:test`]);
 sinon.stub(grunt.file, 'write');
-sinon.stub(grunt, 'warn');
 
 describe('implements a basic flow as file based plugin', () => {
   const OPTS = {p1: 'v1', p2: 'v2'};
+
+  it('should accept contents from all source files', done => {
+    resetAll();
+    runTask(
+      () => {
+        expect(htmlclean.calledOnceWithExactly(ALL_CONTENTS, OPTS)).to.be.true;
+        expect(grunt.file.write.calledOnceWithExactly(OUTPUT_PATH, `${ALL_CONTENTS}<htmlclean>`)).to.be.true;
+
+        done();
+      },
+      OPTS
+    );
+  });
 
   it('should skip process if no file is input', done => {
     resetAll();
@@ -62,20 +75,6 @@ describe('implements a basic flow as file based plugin', () => {
         src: `${FIXTURES_DIR_PATH}/*.txt`,
         dest: OUTPUT_PATH
       }]
-    );
-  });
-
-  it('should accept contents from all source files', done => {
-    resetAll();
-    runTask(
-      () => {
-        expect(htmlclean.calledOnceWithExactly(ALL_CONTENTS, OPTS)).to.be.true;
-        expect(grunt.file.write.calledOnceWithExactly(
-          OUTPUT_PATH, `${ALL_CONTENTS}<htmlclean>`)).to.be.true;
-
-        done();
-      },
-      OPTS
     );
   });
 
