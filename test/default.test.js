@@ -11,10 +11,11 @@ const expect = require('chai').expect,
   path = require('path'),
 
   FIXTURES_DIR_PATH = path.resolve(__dirname, 'fixtures'),
-  ALL_CONTENTS = ['content-1.html', 'content-2.html']
+  CONTENTS = ['content-1.html', 'content-2.html']
     .map(fileName => require('fs').readFileSync(
       path.join(FIXTURES_DIR_PATH, fileName), {encoding: 'utf8'}))
     .join(grunt.util.linefeed),
+  RES_METHOD = `${CONTENTS}<htmlclean>`,
   OUTPUT_PATH = 'path/to/output',
   LIB_NAME = 'htmlclean';
 
@@ -52,8 +53,8 @@ describe('implements a basic flow as file based plugin', () => {
     resetAll();
     runTask(
       () => {
-        expect(htmlclean.calledOnceWithExactly(ALL_CONTENTS, OPTS)).to.be.true;
-        expect(grunt.file.write.calledOnceWithExactly(OUTPUT_PATH, `${ALL_CONTENTS}<htmlclean>`)).to.be.true;
+        expect(htmlclean.calledOnceWithExactly(CONTENTS, OPTS)).to.be.true;
+        expect(grunt.file.write.calledOnceWithExactly(OUTPUT_PATH, RES_METHOD)).to.be.true;
 
         done();
       },
