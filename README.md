@@ -1,6 +1,6 @@
 # grunt-htmlclean
 
-[![npm](https://img.shields.io/npm/v/grunt-htmlclean.svg)](https://www.npmjs.com/package/grunt-htmlclean) [![GitHub issues](https://img.shields.io/github/issues/anseki/grunt-htmlclean.svg)](https://github.com/anseki/grunt-htmlclean/issues) [![David](https://img.shields.io/david/anseki/grunt-htmlclean.svg)](package.json) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE-MIT)
+[![npm](https://img.shields.io/npm/v/grunt-htmlclean.svg)](https://www.npmjs.com/package/grunt-htmlclean) [![GitHub issues](https://img.shields.io/github/issues/anseki/grunt-htmlclean.svg)](https://github.com/anseki/grunt-htmlclean/issues) [![David](https://img.shields.io/david/anseki/grunt-htmlclean.svg)](package.json) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 This [Grunt](http://gruntjs.com/) plugin is wrapper of [htmlclean](https://github.com/anseki/htmlclean).
 
